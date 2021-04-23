@@ -12,11 +12,11 @@ ARG ELASTALERT_VERSION=0.2.4
 
 USER root
 
-RUN INSTALL_PKGS="python3-devel python3-setuptools" && \
-    yum -y install ${INSTALL_PKGS} && \
-    yum -y update && \
-    yum -q clean all && \
-    cd $HOME
+#RUN INSTALL_PKGS="python3-devel python3-setuptools" && \
+#    yum -y install ${INSTALL_PKGS} && \
+#    yum -y update && \
+#    yum -q clean all && \
+#    cd $HOME
 
 # Copy config
 COPY run.sh $ELASTALERT_HOME/run.sh
